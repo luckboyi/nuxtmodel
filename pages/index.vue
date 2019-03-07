@@ -12,8 +12,10 @@ export default {
   methods: {
 
   },
-  created() {
-
+  mounted() {
+    maskCom({
+      title: '提示'
+    })
   }
 }
 </script>
