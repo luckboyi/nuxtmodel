@@ -56,7 +56,7 @@ module.exports = {
     */
     presets: ['es2015', 'stage-0'],
     styleResources: {
-      scss: ['./assets/style/theme.scss']
+      scss: ['./assets/style/theme.scss', './assets/style/mixin.scss']
     },
     extend(config, ctx) {
       if (ctx.dev && ctx.isClient) {

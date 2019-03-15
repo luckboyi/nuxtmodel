@@ -1,6 +1,7 @@
 <template>
-  <section class="container">
-    <div>nuxt模板</div>
+  <section class="container"  >
+    <div class="demo">nuxt模板</div>
+    <button @click="changeTheme">切换主题色</button>
   </section>
 </template>
 
@@ -9,18 +10,23 @@
 export default {
   components: {
   },
-  methods: {
-
-  },
   mounted() {
-    maskCom({
-      title: '提示'
-    })
+    console.log(this.$store.state)
+    // maskCom({
+    //   title: '提示'
+    // })
+  },
+  methods: {
+    changeTheme() {
+      console.log(333)
+      this.$store.commit('init/SET_THEMEINFO', 'red')
+    }
   }
 }
 </script>
 
-<style lang="scss">
+<style lang="scss" >
+
 .container {
   margin: 0 auto;
   min-height: 100vh;
@@ -28,7 +34,10 @@ export default {
   justify-content: center;
   align-items: center;
   text-align: center;
-  color: $mainCol;
+  .demo{
+    @include base-background();
+    @include setColor()
+  }
 }
 
 .title {

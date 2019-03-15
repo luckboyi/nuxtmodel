@@ -1,1 +1,18 @@
-$mainCol:lightblue;
+$mainCol:red;
+// 默认主题
+$default-theme : (
+  base-color: #000,
+  color:lightblue,
+  background:lightyellow
+);
+//红色主题
+$red-theme : (
+  base-color: red,
+  color:lightyellow,
+  background:lightblue
+);
+//定义映射集合
+$themes: (
+  default-theme: $default-theme,
+  red-theme: $red-theme
+);

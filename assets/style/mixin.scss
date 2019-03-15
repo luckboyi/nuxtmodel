@@ -1,0 +1,22 @@
+
+@mixin base-background(){
+  @each $themename , $theme in $themes {
+      [data-theme = '#{$themename}'] & {
+          background: map-get($map: $theme, $key: base-color );
+      }
+  }
+}
+@mixin setColor() {
+    @each $themename,$theme in $themes {
+      [data-theme= '#{$themename}'] & {
+        color:map-get($map:$theme,$key:color);
+      }
+    }
+}
+@mixin setBackground (){
+  @each $themename,$theme in $themes {
+    [data-theme= '#{$themename}'] & {
+      background: map-get($map: $theme, $key: background )
+    }
+  }
+}
