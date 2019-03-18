@@ -16,7 +16,7 @@
 @mixin setBackground (){
   @each $themename,$theme in $themes {
     [data-theme= '#{$themename}'] & {
-      background: map-get($map: $theme, $key: background )
+      background: map-get($map: $theme, $key: backgroundCol )
     }
   }
 }

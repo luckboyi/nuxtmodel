@@ -6,7 +6,6 @@
 
 <style lang="scss" scoped>
 .container{
-  height:1200px;
   @include setBackground();
 }
 </style>

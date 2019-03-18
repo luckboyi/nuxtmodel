@@ -18,8 +18,11 @@ export default {
   },
   methods: {
     changeTheme() {
-      console.log(333)
-      this.$store.commit('init/SET_THEMEINFO', 'red')
+      if (this.$store.state.init.nowThemeInfo == 'default-theme') {
+        this.$store.commit('init/SET_THEMEINFO', 'red')
+      } else {
+        this.$store.commit('init/SET_THEMEINFO', 'default')
+      }
     }
   }
 }

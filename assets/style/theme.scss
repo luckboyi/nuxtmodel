@@ -3,13 +3,13 @@ $mainCol:red;
 $default-theme : (
   base-color: #000,
   color:lightblue,
-  background:lightyellow
+  backgroundCol:lightyellow
 );
 //红色主题
 $red-theme : (
   base-color: red,
   color:lightyellow,
-  background:lightblue
+  backgroundCol:lightblue
 );
 //定义映射集合
 $themes: (
